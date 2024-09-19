@@ -3,7 +3,7 @@
 
 Welcome to the BARK Minter! This application allows you to mint exclusive NFTs on the Solana blockchain. Follow the instructions below to get started.
 
-![BARK Minter Screenshot](public/images/screenshot.jpg)
+![BARK Minter Screenshot](public/images/screenshot.png)
 
 ## Table of Contents
 
