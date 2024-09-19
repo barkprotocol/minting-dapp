@@ -88,6 +88,23 @@ body {
   }
 }
 
+.features-card {
+  padding: 2rem;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.feature-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+  display: block;
+  margin: 0 auto;
+}
+
 @layer base {
   * {
     @apply border-border;

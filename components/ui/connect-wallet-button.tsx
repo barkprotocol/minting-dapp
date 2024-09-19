@@ -13,15 +13,15 @@ const ConnectWalletButton = () => {
     <div className="relative">
       <Button
         onClick={toggleWalletOptions}
-        className={`bg-${isDarkMode ? 'gray-800' : 'gray-100'} text-${isDarkMode ? 'white' : 'black'} p-2 rounded-lg flex items-center`}
+        className={`p-2 rounded-lg flex items-center bg-${isDarkMode ? 'gray-800' : 'gray-100'} text-${isDarkMode ? 'white' : 'black'}`}
         aria-haspopup="true"
         aria-expanded={showWalletOptions}
       >
         <span className="ml-2">Select Wallet</span>
       </Button>
       {showWalletOptions && (
-        <div 
-          className={`absolute top-12 right-0 bg-${isDarkMode ? 'gray-800' : 'white'} text-${isDarkMode ? 'white' : 'black'} rounded-lg shadow-lg p-2 z-50`} 
+        <div
+          className={`absolute top-12 right-0 bg-${isDarkMode ? 'gray-800' : 'white'} text-${isDarkMode ? 'white' : 'black'} rounded-lg shadow-lg p-2 z-50`}
           aria-label="Wallet Options"
         >
           <WalletMultiButton className="wallet-adapter-button-trigger" />

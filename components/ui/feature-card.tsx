@@ -1,34 +1,44 @@
-"use client";
-
 import React from 'react';
-import FeatureCard from '@/components/feature-card';
-import { FaTwitter, FaDiscord, FaTelegram, FaMedium } from 'react-icons/fa';
 
-const FeatureSection: React.FC = () => {
+interface Feature {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+const features: Feature[] = [
+  {
+    title: 'Decentralized Management',
+    description: 'Manage your NFTs on a decentralized platform with security and transparency.',
+    icon: '/icons/decentralized.svg',
+  },
+  {
+    title: 'Exclusive NFTs',
+    description: 'Mint and access exclusive NFTs only available through BARK.',
+    icon: '/icons/exclusive.svg',
+  },
+  {
+    title: 'Seamless Integration',
+    description: 'Easily integrate with your existing Solana wallet and other tools.',
+    icon: '/icons/integration.svg',
+  },
+];
+
+const FeaturesCard: React.FC = () => {
   return (
-    <div className="flex flex-wrap gap-6">
-      <FeatureCard
-        title="Fast Transactions"
-        description="Experience lightning-fast transactions with our optimized blockchain infrastructure."
-        icon={<FaTwitter className="text-4xl text-blue-500" />}
-      />
-      <FeatureCard
-        title="Low Fees"
-        description="Enjoy minimal fees on all transactions and minting activities."
-        icon={<FaDiscord className="text-4xl text-indigo-500" />}
-      />
-      <FeatureCard
-        title="Secure"
-        description="Your assets are protected with top-notch security protocols and practices."
-        icon={<FaTelegram className="text-4xl text-blue-400" />}
-      />
-      <FeatureCard
-        title="Community Driven"
-        description="Be part of a vibrant and supportive community that values creativity and collaboration."
-        icon={<FaMedium className="text-4xl text-black" />}
-      />
-    </div>
+    <section className="features-card">
+      <h2 className="text-2xl font-bold mb-4">Features</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {features.map((feature) => (
+          <div key={feature.title} className="feature-card p-4 border rounded-lg shadow-lg">
+            <img src={feature.icon} alt={feature.title} className="w-12 h-12 mb-2" />
+            <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+            <p>{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
-export default FeatureSection;
+export default FeaturesCard;
